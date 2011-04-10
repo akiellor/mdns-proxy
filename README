@@ -1,0 +1,12 @@
+This is a proof of concept using mDNS to configure a Load Balancer / Reverse Proxy.
+
+The proof on concept is in two parts, the rack proxy and a script to spin up new 'hello_world' app servers.
+
+Start the proxy with:
+  $ rackup proxy.ru
+
+Start the app servers with:
+  $ ./hello_world.rb <port>
+
+
+After hitting the proxy a number of times you will notice the content of the request body will change depending on which app server handles the request.
